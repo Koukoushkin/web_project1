@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Ваша корзина</h1>
+<form method="post" enctype="multipart/form-data">
+<label>Кол-во</label><br>
+<input type="number" name="t" value="1" min="1" max={{col}} step="1">
+<button type="submit" class="btn btn-primary" style="background-color: #D83BD2;">Купить</button>
+<a type="button" class="btn btn-primary btn active" style="background-color: #D83BD2;" href="/index">Назад</a>
+</form>
+{% endblock %}

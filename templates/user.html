@@ -1,0 +1,11 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1><img src={{session['picture']}} alt="здесь должна была быть картинка, но не нашлась"
+         width="100" height="100"> {{username}}</h1>
+<a type="button" class="btn btn-primary btn active" style="background-color: #D83BD2;"
+   href="/avatar/add">Добавить аватар</a>
+<a type="button" class="btn btn-primary btn active" style="background-color: #D83BD2;"
+   href="/avatar/delete">Удалить аватар</a>
+{% endblock %}

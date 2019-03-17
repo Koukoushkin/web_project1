@@ -1,0 +1,22 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Форма для создания товара</h1>
+<form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="about">Название</label><br>
+            <input type="text" size="40" name="nazv"><br>
+            <label for="about">Немного о товаре</label><br>
+            <textarea class="form" id="about" rows="3" cols="50" name="about"></textarea><br>
+            <label for="about">Кол-во</label><br>
+            <input type="number" name="t" value="1" min="1" max="1000" step="10">
+        </div>
+        <label for="about">Добавить файл</label><br>
+            <div class="form-group">
+                <label for="photo">Выберите файл</label>
+                <input type="file" class="form-control-file" id="photo" name="file">
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+{% endblock %}

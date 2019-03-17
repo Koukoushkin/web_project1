@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Hi, {{username}}!</h1>
+{% if news %}
+{% for post in news %}
+{% if session['username'] == 'A_oleg' %}
+    <img src=static/img/{{post[1]}}.jpeg alt="здесь должна была быть картинка, но не нашлась" width="100"
+         height="100">{{post[1]}} <b>{{post[1]}} {{post[3]}}</b> <a href="/del_new/{{post[0]}}" >Удалить</a><br>
+{% else %}
+  <img src=static/img/{{post[1]}}.jpeg alt="здесь должна была быть картинка, но не нашлась" width="100"
+       height="100"> {{post[1]}} <b>{{post[1]}} {{post[3]}}</b> <a href="/buy/{{post[0]}}" >Купить</a><br>
+{% endif %}
+{% endfor %}
+{% else %}
+    Пусто
+{% endif %}
+{% endblock %}
